@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samar Elahi — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-accent">✦</span> Samar
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon sun-icon">
+            <span class="sun-ray"></span><span class="sun-ray"></span>
+            <span class="sun-ray"></span><span class="sun-ray"></span>
+            <span class="sun-core"></span>
+          </span>
+          <span class="toggle-icon moon-icon">
+            <span class="moon-shape"></span>
+          </span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+
+    <!-- Decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+
+    <!-- Floating decorative cards -->
+    <div class="float-card float-card-1">
+      <span class="float-dot"></span>
+      <span class="float-label">UI lover ✦</span>
+    </div>
+    <div class="float-card float-card-2">
+      <span class="float-emoji">🌸</span>
+      <span class="float-label">creative</span>
+    </div>
+    <div class="float-card float-card-3">
+      <span class="float-label">frontend ✿</span>
+    </div>
+    <div class="float-card float-card-4">
+      <span class="float-emoji">💻</span>
+      <span class="float-label">clean code</span>
+    </div>
+    <div class="float-card float-card-5">
+      <span class="float-label">responsive ✦</span>
+    </div>
+
+    <!-- Decorative scrapbook shapes -->
+    <div class="deco-circle deco-c1"></div>
+    <div class="deco-circle deco-c2"></div>
+    <div class="deco-ring deco-r1"></div>
+    <div class="deco-ring deco-r2"></div>
+    <div class="deco-star deco-s1">✦</div>
+    <div class="deco-star deco-s2">✿</div>
+    <div class="deco-star deco-s3">◆</div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-serif">Samar</span>
+        <span class="name-main">Elahi</span>
+      </h1>
+      <p class="hero-title">Aspiring Frontend Web Developer</p>
+      <p class="hero-intro">
+        I build <em>clean</em>, <em>responsive</em>, and <em>user-friendly</em><br class="br-hide" /> web experiences.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">UI Design</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero moodboard panel -->
+    <div class="hero-moodboard">
+      <div class="mood-card mood-main">
+        <div class="mood-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <div class="avatar-initials">SE</div>
+          </div>
+          <div class="avatar-sparkle sp1">✦</div>
+          <div class="avatar-sparkle sp2">✿</div>
+          <div class="avatar-sparkle sp3">◆</div>
+        </div>
+        <div class="mood-info">
+          <p class="mood-name">Samar Elahi</p>
+          <p class="mood-sub">BS Computer Science</p>
+          <div class="mood-bar">
+            <span class="mood-bar-fill"></span>
+          </div>
+          <p class="mood-bar-label">Frontend Journey</p>
+        </div>
+      </div>
+      <div class="mood-sticker sticker-1">
+        <span>✦ currently building</span>
+      </div>
+      <div class="mood-sticker sticker-2">
+        <span>🌷 she/her</span>
+      </div>
+      <div class="mood-mini-card mc1">
+        <div class="mc-top">
+          <span class="mc-dot" style="background:#f4a7b9"></span>
+          <span class="mc-dot" style="background:#c9b8f0"></span>
+          <span class="mc-dot" style="background:#a8d5c2"></span>
+        </div>
+        <p class="mc-text">Designing with purpose ✿</p>
+      </div>
+      <div class="mood-mini-card mc2">
+        <p class="mc-icon">🎨</p>
+        <p class="mc-text">UI / UX</p>
+      </div>
+      <div class="mood-progress-pill">
+        <span class="pill-label">Skill Level</span>
+        <span class="pill-track"><span class="pill-fill"></span></span>
+        <span class="pill-val">Growing</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span class="scroll-dot"></span>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="section about-section" id="about">
+    <div class="section-inner">
+
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>About Me</span>
+        <span class="label-line"></span>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-left reveal">
+          <div class="about-visual">
+            <div class="av-blob"></div>
+            <div class="av-card">
+              <div class="av-initials-block">
+                <span>S</span><span>E</span>
+              </div>
+              <div class="av-details">
+                <div class="av-row"><span class="av-key">Name</span><span class="av-val">Samar Elahi</span></div>
+                <div class="av-row"><span class="av-key">Degree</span><span class="av-val">BS CS</span></div>
+                <div class="av-row"><span class="av-key">Role</span><span class="av-val">Frontend Dev</span></div>
+                <div class="av-row"><span class="av-key">Status</span><span class="av-val available">Available ✓</span></div>
+              </div>
+            </div>
+            <div class="av-sticker">✦ passionate</div>
+            <div class="av-sticker2">creative 🌸</div>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <h2 class="section-heading">
+            Hello, I'm <span class="accent-text">Samar</span> 🌸
+          </h2>
+          <div class="about-serif-quote">
+            <em>"Turning ideas into beautiful digital experiences."</em>
+          </div>
+          <p class="about-text">
+            Creative and adaptable BS Computer Science student passionate about web development and digital design. I enjoy building clean, responsive, and user-friendly web experiences that feel as good as they look.
+          </p>
+          <p class="about-text">
+            I believe great design and great code aren't opposites — they're partners. Every project I touch is a chance to merge aesthetic sensibility with technical craft.
+          </p>
+          <div class="about-chips">
+            <span class="chip">🎓 CS Student</span>
+            <span class="chip">💻 Frontend Dev</span>
+            <span class="chip">🎨 Design Lover</span>
+            <span class="chip">🌱 Lifelong Learner</span>
+          </div>
+          <a href="#contact" class="btn btn-primary about-btn">Say Hello →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="section skills-section" id="skills">
+    <div class="section-inner">
+
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>Skills</span>
+        <span class="label-line"></span>
+      </div>
+
+      <h2 class="section-heading centered reveal">What I <span class="accent-text">bring</span> to the table</h2>
+      <p class="section-subtext centered reveal">A curated set of skills I've cultivated through projects, curiosity, and relentless practice.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-icon-wrap">
+            <div class="skill-icon html-icon">
+              <span class="sk-label">HTML</span>
+              <div class="sk-bracket left">&lt;</div>
+              <div class="sk-bracket right">/&gt;</div>
+            </div>
+          </div>
+          <h3 class="skill-name">HTML5</h3>
+          <p class="skill-desc">Semantic, accessible markup that forms solid foundations.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="90"></div>
+          </div>
+          <div class="skill-tags">
+            <span>Semantic</span><span>Accessible</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="80">
+          <div class="skill-icon-wrap">
+            <div class="skill-icon css-icon">
+              <span class="sk-label">CSS</span>
+              <div class="sk-curly left">{</div>
+              <div class="sk-curly right">}</div>
+            </div>
+          </div>
+          <h3 class="skill-name">CSS3</h3>
+          <p class="skill-desc">Animations, layouts, and pixel-perfect styling.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="88"></div>
+          </div>
+          <div class="skill-tags">
+            <span>Flexbox</span><span>Grid</span><span>Animations</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="160">
+          <div class="skill-icon-wrap">
+            <div class="skill-icon js-icon">
+              <span class="sk-label">JS</span>
+              <div class="sk-paren left">(</div>
+              <div class="sk-paren right">)</div>
+            </div>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+          <p class="skill-desc">Interactive, dynamic experiences powered by clean JS logic.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="80"></div>
+          </div>
+          <div class="skill-tags">
+            <span>ES6+</span><span>DOM</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="240">
+          <div class="skill-icon-wrap">
+            <div class="skill-icon resp-icon">
+              <div class="sk-device desktop"></div>
+              <div class="sk-device tablet"></div>
+              <div class="sk-device phone"></div>
+            </div>
+          </div>
+          <h3 class="skill-name">Responsive Design</h3>
+          <p class="skill-desc">Layouts that feel natural on every screen size.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="85"></div>
+          </div>
+          <div class="skill-tags">
+            <span>Mobile-First</span><span>Fluid</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="320">
+          <div class="skill-icon-wrap">
+            <div class="skill-icon ui-icon">
+              <div class="ui-rect r1"></div>
+              <div class="ui-rect r2"></div>
+              <div class="ui-rect r3"></div>
+            </div>
+          </div>
+          <h3 class="skill-name">UI-Focused Dev</h3>
+          <p class="skill-desc">Crafting interfaces that are both beautiful and functional.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="82"></div>
+          </div>
+          <div class="skill-tags">
+            <span>Design Systems</span><span>UX</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="400">
+          <div class="skill-icon-wrap">
+            <div class="skill-icon ps-icon">
+              <div class="ps-gear">
+                <div class="gear-center"></div>
+                <div class="gear-tooth t1"></div>
+                <div class="gear-tooth t2"></div>
+                <div class="gear-tooth t3"></div>
+                <div class="gear-tooth t4"></div>
+              </div>
+            </div>
+          </div>
+          <h3 class="skill-name">Problem-Solving</h3>
+          <p class="skill-desc">Breaking complex challenges into elegant solutions.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="86"></div>
+          </div>
+          <div class="skill-tags">
+            <span>Analytical</span><span>Creative</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section projects-section" id="projects">
+    <div class="section-inner">
+
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>Projects</span>
+        <span class="label-line"></span>
+      </div>
+
+      <h2 class="section-heading centered reveal">Things I've <span class="accent-text">built</span> ✦</h2>
+      <p class="section-subtext centered reveal">A curated selection of projects that reflect my aesthetic and technical vision.</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-delay="0">
+          <div class="project-top pt-pink">
+            <div class="pt-blob"></div>
+            <div class="pt-deco-star">✦</div>
+            <div class="pt-deco-circle"></div>
+            <div class="project-number">01</div>
+            <div class="project-icon pi-portfolio">
+              <div class="pi-browser">
+                <div class="pi-dots"><span></span><span></span><span></span></div>
+                <div class="pi-lines">
+                  <div class="pi-line l1"></div>
+                  <div class="pi-line l2"></div>
+                  <div class="pi-line l3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-label-row">
+              <span class="project-status">Featured</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">Aura Portfolio Website</h3>
+            <p class="project-desc">A dreamy, editorial-style personal portfolio with smooth animations, glassmorphism effects, and a curated aesthetic designed to leave a lasting impression.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo →</a>
+              <a href="#" class="btn btn-ghost btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" data-delay="120">
+          <div class="project-top pt-lavender">
+            <div class="pt-blob"></div>
+            <div class="pt-deco-star">✿</div>
+            <div class="pt-deco-circle"></div>
+            <div class="project-number">02</div>
+            <div class="project-icon pi-task">
+              <div class="pi-list">
+                <div class="pi-item done"><div class="pi-check"></div><div class="pi-text-bar"></div></div>
+                <div class="pi-item done"><div class="pi-check"></div><div class="pi-text-bar"></div></div>
+                <div class="pi-item"><div class="pi-check empty"></div><div class="pi-text-bar"></div></div>
+                <div class="pi-item"><div class="pi-check empty"></div><div class="pi-text-bar short"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-label-row">
+              <span class="project-status">Productivity</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">TaskFlow To-Do App</h3>
+            <p class="project-desc">A minimal yet powerful task management app with local storage, drag-and-drop sorting, priority tagging, and a clean aesthetic UI that makes productivity feel enjoyable.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo →</a>
+              <a href="#" class="btn btn-ghost btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" data-delay="240">
+          <div class="project-top pt-peach">
+            <div class="pt-blob"></div>
+            <div class="pt-deco-star">◆</div>
+            <div class="pt-deco-circle"></div>
+            <div class="project-number">03</div>
+            <div class="project-icon pi-landing">
+              <div class="pi-landing-inner">
+                <div class="pil-header"></div>
+                <div class="pil-hero"></div>
+                <div class="pil-cards">
+                  <div class="pil-card"></div>
+                  <div class="pil-card"></div>
+                  <div class="pil-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-label-row">
+              <span class="project-status">Landing Page</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">Nova Product Landing Page</h3>
+            <p class="project-desc">A high-converting, visually rich product landing page with animated sections, smooth scroll effects, and a modern editorial layout built entirely with vanilla web tech.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo →</a>
+              <a href="#" class="btn btn-ghost btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner">
+
+      <div class="blob contact-blob-1"></div>
+      <div class="blob contact-blob-2"></div>
+
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>Contact</span>
+        <span class="label-line"></span>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <h2 class="section-heading">Let's <span class="accent-text">connect</span> 🌸</h2>
+          <p class="contact-sub">Let's connect and build something great.</p>
+          <p class="contact-text">I'm currently open to frontend roles, freelance projects, and creative collaborations. If you have something exciting in mind, my inbox is always open.</p>
+
+          <div class="contact-email-card">
+            <div class="ec-icon">✉</div>
+            <div class="ec-info">
+              <span class="ec-label">Email me at</span>
+              <a href="mailto:sabrinaswift45@gmail.com" class="ec-addr">sabrinaswift45@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-vibes">
+            <span class="vibe-tag">open to work ✦</span>
+            <span class="vibe-tag">freelance friendly ✿</span>
+            <span class="vibe-tag">let's collab 🌷</span>
+          </div>
+        </div>
+
+        <div class="contact-right reveal">
+          <div class="contact-form-card">
+            <div class="form-deco-star cfs1">✦</div>
+            <div class="form-deco-star cfs2">✿</div>
+            <h3 class="form-title">Send a Message</h3>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="e.g. Alex Johnson" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="e.g. hello@email.com" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Tell me about your project or just say hi ✨"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-btn">
+                <span>Send Message</span>
+                <span class="btn-arrow">✦</span>
+              </button>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <span class="success-icon">🌸</span>
+              <p>Message sent! I'll be in touch soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-deco-row">
+        <span class="footer-deco">✦</span>
+        <span class="footer-deco">✿</span>
+        <span class="footer-deco">◆</span>
+        <span class="footer-deco">✦</span>
+        <span class="footer-deco">✿</span>
+      </div>
+      <p class="footer-name">Samar Elahi</p>
+      <p class="footer-tagline">Frontend Developer · Creative Soul · Digital Dreamer</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <span>·</span>
+        <a href="#skills">Skills</a>
+        <span>·</span>
+        <a href="#projects">Projects</a>
+        <span>·</span>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">Crafted with ♡ by Samar Elahi — 2024</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
