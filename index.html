@@ -1,299 +1,171 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samar Elahi — Full-Stack Developer & Web Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfolio of Samar Elahi — Full-Stack Developer, Web Designer, and Mobile App Builder creating modern digital experiences.">
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Load only essential font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme')||'light';
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
 </head>
 <body>
 
-  <!-- ===== CURSOR ===== -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- ===== LOADER ===== -->
-  <div class="page-loader" id="pageLoader">
-    <div class="loader-inner">
-      <div class="loader-name">Samar Elahi</div>
-      <div class="loader-bar"><div class="loader-fill"></div></div>
-      <div class="loader-tagline">Loading something beautiful...</div>
-    </div>
-  </div>
+  <!-- Custom Cursor -->
+  <div class="cursor-follower"></div>
 
   <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a class="nav-logo" href="#hero">
-        <span class="logo-s">S</span><span class="logo-rest">amar</span>
-        <span class="logo-dot"></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="toggle-sun">☀</span>
-          <span class="toggle-moon">◐</span>
-          <div class="toggle-track"></div>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+  <nav class="navbar">
+    <a href="#hero" class="nav-logo">Samar<span class="logo-dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="sun">&#9788;</span>
+        <span class="moon">&#9790;</span>
+      </button>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
+  <!-- Mobile Nav -->
+  <div class="mobile-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <!-- Animated blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+    </div>
+    <div class="hero-deco deco-ring"></div>
+    <div class="hero-deco deco-ring-2"></div>
+    <div class="hero-deco deco-star"></div>
+    <div class="hero-deco deco-star deco-star-2"></div>
+    <div class="hero-deco deco-diamond"></div>
 
-    <!-- Floating decorative elements -->
-    <div class="deco-star deco-star-1">✦</div>
-    <div class="deco-star deco-star-2">✧</div>
-    <div class="deco-star deco-star-3">✦</div>
-    <div class="deco-star deco-star-4">✶</div>
-    <div class="deco-star deco-star-5">✺</div>
-    <div class="deco-ring deco-ring-1"></div>
-    <div class="deco-ring deco-ring-2"></div>
-    <div class="deco-ring deco-ring-3"></div>
-
-    <div class="hero-container">
-      <!-- Left content -->
-      <div class="hero-left">
-        <div class="hero-badge reveal-up">
-          <span class="badge-dot"></span>
-          Available for opportunities
-        </div>
-
-        <h1 class="hero-name reveal-up delay-1">
-          <span class="name-line">Samar</span>
-          <span class="name-line italic">Elahi</span>
-        </h1>
-
-        <div class="hero-titles reveal-up delay-2">
-          <span class="title-word active" data-index="0">Full-Stack Developer</span>
-          <span class="title-separator">·</span>
-          <span class="title-word" data-index="1">Web Designer</span>
-          <span class="title-separator">·</span>
-          <span class="title-word" data-index="2">Mobile App Builder</span>
-        </div>
-
-        <p class="hero-intro reveal-up delay-3">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name"><span class="name-highlight">Samar</span> Elahi</h1>
+        <p class="hero-title">
+          <span class="hero-typed">Full-Stack Developer</span>
+          <span style="opacity:0.4;margin:0 4px;">•</span> Web Designer
+          <span style="opacity:0.4;margin:0 4px;">•</span> Mobile App Builder
+        </p>
+        <p class="hero-description">
           I design and develop modern websites, web applications, and mobile app experiences with clean code, strong functionality, and user-focused design.
         </p>
-
-        <div class="hero-tags reveal-up delay-4">
-          <span class="tag">Frontend Development</span>
-          <span class="tag">Backend Development</span>
-          <span class="tag">Web Apps</span>
-          <span class="tag">Mobile App UI</span>
-          <span class="tag">Web Design</span>
+        <div class="hero-tags">
+          <span class="hero-tag">Frontend Development</span>
+          <span class="hero-tag">Backend Development</span>
+          <span class="hero-tag">Web Apps</span>
+          <span class="hero-tag">Mobile App UI</span>
+          <span class="hero-tag">Web Design</span>
         </div>
-
-        <div class="hero-cta reveal-up delay-5">
-          <a href="#projects" class="btn btn-primary">
-            <span>View Projects</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span>Contact Me</span>
-          </a>
+        <div class="hero-ctas">
+          <a href="#experience" class="btn-primary">My Experience <span>&#8594;</span></a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
         </div>
       </div>
 
-      <!-- Right moodboard -->
-      <div class="hero-right" id="heroRight">
-        <div class="moodboard" id="moodboard">
-
-          <!-- Central identity card -->
-          <div class="mood-card identity-card float-card" data-depth="1">
-            <div class="identity-avatar">
-              <div class="avatar-ring"></div>
-              <div class="avatar-inner">
-                <span class="avatar-initials">SE</span>
-              </div>
-            </div>
-            <div class="identity-info">
-              <div class="identity-name">Samar Elahi</div>
-              <div class="identity-role">Full-Stack Dev</div>
-            </div>
-            <div class="identity-badge">
-              <span class="pulse-dot"></span> Open to work
-            </div>
-          </div>
-
-          <!-- Floating mini cards -->
-          <div class="mood-card mini-card card-frontend float-card" data-depth="2">
-            <div class="mini-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <div class="mini-label">Frontend Dev</div>
-            <div class="mini-bar"><div class="mini-fill" style="width:90%"></div></div>
-          </div>
-
-          <div class="mood-card mini-card card-backend float-card" data-depth="3">
-            <div class="mini-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0018 0V5"/><path d="M3 12a9 3 0 0018 0"/></svg>
-            </div>
-            <div class="mini-label">Backend Dev</div>
-            <div class="mini-bar"><div class="mini-fill" style="width:80%"></div></div>
-          </div>
-
-          <div class="mood-card mini-card card-design float-card" data-depth="2">
-            <div class="mini-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            </div>
-            <div class="mini-label">Web Design</div>
-            <div class="mini-bar"><div class="mini-fill" style="width:85%"></div></div>
-          </div>
-
-          <!-- Sticker cards -->
-          <div class="mood-card sticker-card sticker-1 float-card" data-depth="4">
-            <span class="sticker-emoji">✦</span>
-            <span class="sticker-text">Clean Code</span>
-          </div>
-
-          <div class="mood-card sticker-card sticker-2 float-card" data-depth="3">
-            <span class="sticker-emoji">◈</span>
-            <span class="sticker-text">UI/UX</span>
-          </div>
-
-          <div class="mood-card sticker-card sticker-3 float-card" data-depth="2">
-            <span class="sticker-emoji">⬡</span>
-            <span class="sticker-text">Full-Stack</span>
-          </div>
-
-          <!-- Tech pill -->
-          <div class="mood-card tech-pill float-card" data-depth="5">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JS</span>
-          </div>
-
-          <!-- Aesthetic label -->
-          <div class="mood-card aesthetic-label float-card" data-depth="2">
-            <div class="label-line"></div>
-            <span>CS Student · Developer</span>
-            <div class="label-line"></div>
-          </div>
-
-          <!-- Decorative ring elements inside board -->
-          <div class="board-ring board-ring-1"></div>
-          <div class="board-ring board-ring-2"></div>
-          <div class="board-dot board-dot-1"></div>
-          <div class="board-dot board-dot-2"></div>
-          <div class="board-dot board-dot-3"></div>
-
+      <!-- Hero Visual -->
+      <div class="hero-visual">
+        <!-- Identity Card -->
+        <div class="mood-card identity-card">
+          <div class="id-avatar-wrap">S</div>
+          <div class="id-name">Samar Elahi</div>
+          <div class="id-role">Full-Stack Developer</div>
+          <div class="id-status">
+          <span class="status-dot"></span> Available for Work
         </div>
       </div>
-    </div>
 
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator reveal-up delay-5">
-      <div class="scroll-line"></div>
-      <span>Scroll to explore</span>
+        <!-- Floating Cards -->
+        <div class="mood-card float-card float-card-1" style="--rot:-8deg;">
+          <div class="fc-icon">&#9998;</div>
+          <div class="fc-label">Focus</div>
+          <div class="fc-value">Web Dev</div>
+        </div>
+        <div class="mood-card float-card float-card-2" style="--rot:6deg;">
+          <div class="fc-icon">&#9670;</div>
+          <div class="fc-label">Stack</div>
+          <div class="fc-value">Full-Stack</div>
+        </div>
+        <div class="mood-card float-card float-card-3" style="--rot:5deg;">
+          <div class="fc-icon">&#9733;</div>
+          <div class="fc-label">Design</div>
+          <div class="fc-value">UI / UX</div>
+        </div>
+        <div class="mood-card float-card float-card-4" style="--rot:-6deg;">
+          <div class="fc-icon">&#9883;</div>
+          <div class="fc-label">Build</div>
+          <div class="fc-value">Apps</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
-    <div class="about-bg-deco">
-      <div class="about-blob-1"></div>
-      <div class="about-blob-2"></div>
+    <div class="section-header reveal">
+      <span class="section-label">&#9670; Get to know me</span>
+      <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+      <div class="section-divider"></div>
     </div>
-    <div class="section-container">
-      <div class="section-label reveal-up">About Me</div>
-      <div class="about-grid">
-        <div class="about-left">
-          <h2 class="section-title reveal-up delay-1">
-            Crafting digital<br/>
-            <em>experiences</em> that<br/>
-            actually work.
-          </h2>
-          <div class="about-chips reveal-up delay-2">
-            <span class="chip">CS Student</span>
-            <span class="chip">Full-Stack Dev</span>
-            <span class="chip">Web Developer</span>
-            <span class="chip">App Builder</span>
-            <span class="chip">UI-Aware</span>
-          </div>
-          <div class="about-visual reveal-up delay-3">
-            <div class="av-card">
-              <div class="av-card-inner">
-                <div class="av-icon">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <div class="av-stat">
-                  <div class="av-num">1</div>
-                  <div class="av-desc">Projects Built</div>
-                </div>
-              </div>
-            </div>
-            <div class="av-card">
-              <div class="av-card-inner">
-                <div class="av-icon">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                </div>
-                <div class="av-stat">
-                  <div class="av-num">10+</div>
-                  <div class="av-desc">Skills Mastered</div>
-                </div>
-              </div>
-            </div>
-            <div class="av-card">
-              <div class="av-card-inner">
-                <div class="av-icon">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                </div>
-                <div class="av-stat">
-                  <div class="av-num">∞</div>
-                  <div class="av-desc">Learning Always</div>
-                </div>
-              </div>
-            </div>
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-frame">
+          <div class="af-avatar">S</div>
+          <h4>Samar Elahi</h4>
+          <p class="af-role">BS Computer Science</p>
+          <div class="af-stats">
+            <div class="af-stat"><div class="stat-num" data-count="10">0+</div><div class="stat-label">Projects</div></div>
+            <div class="af-stat"><div class="stat-num" data-count="6">0+</div><div class="stat-label">Technologies</div></div>
+            <div class="af-stat"><div class="stat-num" data-count="3">0+</div><div class="stat-label">Years Coding</div></div>
+            <div class="af-stat"><div class="stat-num" data-count="3">0+</div><div class="stat-label">Years Exp</div></div>
           </div>
         </div>
-        <div class="about-right reveal-up delay-2">
-          <div class="about-text-block">
-            <p class="about-para">
-              I'm a <strong>BS Computer Science student</strong> passionate about building modern digital experiences through code and design. I work across frontend development, backend logic, web design, and app interface creation to build products that are both functional and visually strong.
-            </p>
-            <p class="about-para">
-              My work sits at the intersection of <em>technical precision</em> and <em>aesthetic sensibility</em> — I believe great software must feel as good as it performs. Whether architecting a backend system, crafting a responsive layout, or designing a UI that users love, I bring full-stack thinking to every project.
-            </p>
-            <p class="about-para">
-              I'm driven by the challenge of creating products that <strong>solve real problems beautifully</strong> — combining clean code with intentional design to deliver digital experiences that are both impressive to use and powerful under the hood.
-            </p>
-          </div>
-          <div class="about-focus-areas">
-            <div class="focus-item reveal-left">
-              <div class="focus-dot"></div>
-              <span>Frontend Architecture & UI Engineering</span>
-            </div>
-            <div class="focus-item reveal-left delay-1">
-              <div class="focus-dot"></div>
-              <span>Backend Systems & API Development</span>
-            </div>
-            <div class="focus-item reveal-left delay-2">
-              <div class="focus-dot"></div>
-              <span>Responsive Web Design & Mobile UI</span>
-            </div>
-            <div class="focus-item reveal-left delay-3">
-              <div class="focus-dot"></div>
-              <span>User-Centered Product Development</span>
-            </div>
-          </div>
+        <div class="about-floating-badge">&#10024; Creative Coder</div>
+        <div class="about-floating-badge">&#9889; Problem Solver</div>
+        <div class="about-floating-badge">&#127912; Design-Aware</div>
+      </div>
+      <div class="about-text reveal-right">
+        <h3>Building digital products that <em>feel</em> as good as they work</h3>
+        <p>I'm a BS Computer Science student with real-world experience passionate about building modern digital experiences through code and design. I work across frontend development, backend logic, web design, and app interface creation to build products that are both functional and visually strong.</p>
+        <p>My approach blends technical precision with creative thinking — I believe every line of code should serve the user, and every pixel should have purpose. From responsive web applications to mobile app interfaces, I enjoy the full spectrum of product development.</p>
+        <div class="about-chips">
+          <span class="about-chip">&#127891; CS Student</span>
+          <span class="about-chip">&#128187; Full-Stack Dev</span>
+          <span class="about-chip">&#127760; Web Developer</span>
+          <span class="about-chip">&#128241; App Builder</span>
+          <span class="about-chip">&#127912; UI-Aware</span>
         </div>
       </div>
     </div>
@@ -301,469 +173,245 @@
 
   <!-- ===== SKILLS ===== -->
   <section class="skills" id="skills">
-    <div class="skills-bg">
-      <div class="skills-blob-1"></div>
-      <div class="skills-blob-2"></div>
+    <div class="section-header reveal">
+      <span class="section-label">&#9670; What I work with</span>
+      <h2 class="section-title">Skills & <span class="title-accent">Expertise</span></h2>
+      <p class="section-subtitle">A versatile skill set spanning frontend, backend, design implementation, and app development.</p>
+      <div class="section-divider"></div>
     </div>
-    <div class="section-container">
-      <div class="section-label reveal-up">What I Do</div>
-      <h2 class="section-title centered reveal-up delay-1">
-        Skills & <em>Expertise</em>
-      </h2>
-      <p class="section-subtitle reveal-up delay-2">
-        A full spectrum of capabilities — from pixels to servers, design to deployment.
-      </p>
+    <div class="skills-grid">
 
-      <div class="skills-grid">
-
-        <div class="skill-card reveal-up delay-1" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon html-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 3l1.5 17L12 22l6.5-2L20 3H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 8H8l.5 5h7L15 17l-3 1-3-1-.2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">HTML5</div>
-          <div class="skill-desc">Semantic, accessible, and structured markup for modern web.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
-            <span class="skill-pct">95%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Markup</span><span class="s-tag">Semantic</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-2" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon css-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 3l1.5 17L12 22l6.5-2L20 3H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16.5 8.5h-9l.4 4h8.1l-.6 5-3.4 1-3.4-1-.2-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">CSS3</div>
-          <div class="skill-desc">Animations, transforms, flexbox, grid, and pseudo-3D effects.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
-            <span class="skill-pct">92%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Styling</span><span class="s-tag">Animation</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-3" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon js-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M14 10v4a2 2 0 004 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">JavaScript</div>
-          <div class="skill-desc">DOM manipulation, ES6+, async logic, and rich interactivity.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-            <span class="skill-pct">88%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">ES6+</span><span class="s-tag">Logic</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-1" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon fe-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">Frontend Dev</div>
-          <div class="skill-desc">Building rich, responsive UIs with performance and precision.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-            <span class="skill-pct">90%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">UI Build</span><span class="s-tag">React</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-2" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon be-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 5v14a9 3 0 0018 0V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 12a9 3 0 0018 0" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">Backend Dev</div>
-          <div class="skill-desc">Server logic, APIs, databases, and robust application architecture.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-            <span class="skill-pct">82%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">APIs</span><span class="s-tag">Node.js</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-3" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon web-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">Web Development</div>
-          <div class="skill-desc">End-to-end web solution delivery from concept to deployment.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-            <span class="skill-pct">88%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Full-Cycle</span><span class="s-tag">Deploy</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-1" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon app-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="12" y2="18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">App Development</div>
-          <div class="skill-desc">Mobile-first interfaces and cross-platform app experiences.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-            <span class="skill-pct">78%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Mobile</span><span class="s-tag">App UI</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-2" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon resp-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="1" y="6" width="22" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M15 19v2M9 19v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="14" y="8" width="7" height="9" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">Responsive Design</div>
-          <div class="skill-desc">Fluid, adaptive layouts that work beautifully on every screen.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
-            <span class="skill-pct">93%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Fluid</span><span class="s-tag">Adaptive</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-3" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon ui-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">UI-Focused Dev</div>
-          <div class="skill-desc">Pixel-perfect implementation bridging design and engineering.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="91"></div></div>
-            <span class="skill-pct">91%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Pixel-Perfect</span><span class="s-tag">UX</span></div>
-        </div>
-
-        <div class="skill-card reveal-up delay-1" data-tilt>
-          <div class="skill-card-glow"></div>
-          <div class="skill-icon-wrap">
-            <div class="skill-icon ps-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 12H4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-          </div>
-          <div class="skill-name">Problem-Solving</div>
-          <div class="skill-desc">Analytical thinking and creative solutions to complex challenges.</div>
-          <div class="skill-progress">
-            <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
-            <span class="skill-pct">87%</span>
-          </div>
-          <div class="skill-tag-row"><span class="s-tag">Analytical</span><span class="s-tag">Creative</span></div>
-        </div>
-
+      <div class="skill-card reveal" data-delay="0">
+        <span class="skill-number">01</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#e8715a,#c9534a);"></div><span style="position:relative;z-index:1;">&lt;/&gt;</span></div>
+        <h3>HTML</h3>
+        <p>Semantic, accessible markup that forms the backbone of every web project I build.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>95%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="95"></div></div>
       </div>
+
+      <div class="skill-card reveal" data-delay="80">
+        <span class="skill-number">02</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#5a9be8,#4a6ac9);"></div><span style="position:relative;z-index:1;">{ }</span></div>
+        <h3>CSS</h3>
+        <p>From layouts to animations — creating polished, responsive visual experiences with pure CSS.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>92%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="92"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="160">
+        <span class="skill-number">03</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#e8c95a,#c9a534);"></div><span style="position:relative;z-index:1;">JS</span></div>
+        <h3>JavaScript</h3>
+        <p>Interactive, dynamic functionality — from DOM manipulation to complex app logic and API integration.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>88%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="88"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="240">
+        <span class="skill-number">04</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#a05ab8,#7a3a98);"></div><span style="position:relative;z-index:1;">&#9776;</span></div>
+        <h3>Frontend Development</h3>
+        <p>Building user-facing interfaces with pixel-perfect precision and smooth interactions.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>90%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="90"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="320">
+        <span class="skill-number">05</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#4ab88a,#348a6a);"></div><span style="position:relative;z-index:1;">&#9881;</span></div>
+        <h3>Backend Development</h3>
+        <p>Server-side logic, APIs, databases, and the invisible architecture that powers applications.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>80%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="80"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="400">
+        <span class="skill-number">06</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#e87a5a,#c95a3a);"></div><span style="position:relative;z-index:1;">&#127760;</span></div>
+        <h3>Web Development</h3>
+        <p>End-to-end web solutions — from concept to deployment, covering the full development lifecycle.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>88%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="88"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="480">
+        <span class="skill-number">07</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#5a8ae8,#3a6ac9);"></div><span style="position:relative;z-index:1;">&#128241;</span></div>
+        <h3>App Development</h3>
+        <p>Creating mobile-first app interfaces and experiences optimized for touch and performance.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>78%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="78"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="560">
+        <span class="skill-number">08</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#b85a9a,#983a7a);"></div><span style="position:relative;z-index:1;">&#9707;</span></div>
+        <h3>Responsive Design</h3>
+        <p>Fluid layouts that look stunning across every device, from mobile to ultra-wide displays.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>93%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="93"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="640">
+        <span class="skill-number">09</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#c9a05a,#a8803a);"></div><span style="position:relative;z-index:1;">&#9733;</span></div>
+        <h3>UI-Focused Development</h3>
+        <p>Bridging design and code — implementing interfaces that are visually precise and technically robust.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>87%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="87"></div></div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="720">
+        <span class="skill-number">10</span>
+        <div class="skill-icon"><div class="icon-shape" style="background:linear-gradient(135deg,#5ac9b8,#3aa898);"></div><span style="position:relative;z-index:1;">&#128161;</span></div>
+        <h3>Problem-Solving</h3>
+        <p>Analytical thinking and debugging skills that turn complex challenges into elegant solutions.</p>
+        <div class="skill-bar-label"><span>Proficiency</span><span>90%</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-level="90"></div></div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section class="projects" id="projects">
-    <div class="projects-bg">
-      <div class="proj-blob-1"></div>
-      <div class="proj-blob-2"></div>
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="experience" id="experience">
+    <div class="section-header reveal">
+      <span class="section-label">&#9670; Work history</span>
+      <h2 class="section-title">My <span class="title-accent">Experience</span></h2>
+      <p class="section-subtitle">Real-world professional experience applying digital skills in a fast-paced company environment.</p>
+      <div class="section-divider"></div>
     </div>
-    <div class="section-container">
-      <div class="section-label reveal-up">My Work</div>
-      <h2 class="section-title centered reveal-up delay-1">
-        Featured <em>Projects</em>
-      </h2>
-      <p class="section-subtitle reveal-up delay-2">
-        Real projects, real code, real functionality — built with intention and craft.
-      </p>
 
-      <div class="projects-grid">
+    <div class="experience-list">
 
-        <!-- Project 1 -->
-        <div class="project-card reveal-up delay-1" data-tilt>
-          <div class="project-card-inner">
-            <div class="project-shimmer"></div>
-            <div class="project-header">
-              <div class="project-status">
-                <span class="status-dot"></span> Live Project
-              </div>
-              <div class="project-number">01</div>
-            </div>
-            <div class="project-visual project-visual-1">
-              <div class="pv-browser">
-                <div class="pv-bar">
-                  <span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span>
-                </div>
-                <div class="pv-content">
-                  <div class="pv-hero-block"></div>
-                  <div class="pv-nav">
-                    <div class="pv-nav-item"></div>
-                    <div class="pv-nav-item"></div>
-                    <div class="pv-nav-item"></div>
-                  </div>
-                  <div class="pv-grid">
-                    <div class="pv-card"></div>
-                    <div class="pv-card"></div>
-                    <div class="pv-card"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="project-category">Portfolio · Web Design</div>
-            <h3 class="project-title">Aura Portfolio<br/>Website</h3>
-            <p class="project-desc">
-              A premium personal portfolio built with advanced CSS animations, pseudo-3D depth effects, and JavaScript-driven interactivity. Features scroll-driven reveals, parallax motion, dark mode, and a sophisticated visual identity system — demonstrating strong frontend architecture and design-engineering integration.
-            </p>
-            <div class="project-stack">
-              <span class="tech">HTML5</span>
-              <span class="tech">CSS3</span>
-              <span class="tech">Vanilla JS</span>
-              <span class="tech">CSS Animations</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="proj-btn proj-btn-primary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
-              <a href="#" class="proj-btn proj-btn-secondary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
+      <!-- Experience Card -->
+      <div class="exp-card reveal" data-delay="100">
+        <div class="exp-icon-col">
+          <div class="exp-icon-wrap">&#127760;</div>
+          <div class="exp-timeline-line"></div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <div class="exp-role-title">Full-Stack Developer</div>
+            <div class="exp-period-badge">2022 – 2023</div>
+          </div>
+          <div class="exp-company-line">
+            <span class="exp-company-name">AS Web Company</span>
+            <span class="exp-company-sep">·</span>
+            <span class="exp-company-type">Remote</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>
+              <div class="exp-bullet-dot"></div>
+              <span>Developed responsive websites and web applications using HTML, CSS, JavaScript, and backend technologies</span>
+            </li>
+            <li>
+              <div class="exp-bullet-dot"></div>
+              <span>Built frontend interfaces and integrated them with backend APIs and databases</span>
+            </li>
+            <li>
+              <div class="exp-bullet-dot"></div>
+              <span>Collaborated with design and product teams to implement UI/UX improvements</span>
+            </li>
+            <li>
+              <div class="exp-bullet-dot"></div>
+              <span>Worked on mobile app interfaces and cross-platform development projects</span>
+            </li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">HTML</span>
+            <span class="exp-tag">CSS</span>
+            <span class="exp-tag">JavaScript</span>
+            <span class="exp-tag">Backend APIs</span>
+            <span class="exp-tag">Databases</span>
+            <span class="exp-tag">UI/UX</span>
+            <span class="exp-tag">Mobile UI</span>
+            <span class="exp-tag">Cross-Platform</span>
           </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card reveal-up delay-2" data-tilt>
-          <div class="project-card-inner">
-            <div class="project-shimmer"></div>
-            <div class="project-header">
-              <div class="project-status">
-                <span class="status-dot"></span> Completed
-              </div>
-              <div class="project-number">02</div>
-            </div>
-            <div class="project-visual project-visual-2">
-              <div class="pv-app">
-                <div class="pv-app-header">
-                  <div class="pv-app-title">TaskFlow</div>
-                  <div class="pv-add-btn">+</div>
-                </div>
-                <div class="pv-tasks">
-                  <div class="pv-task pv-done"><div class="pv-check"></div><div class="pv-task-text"></div></div>
-                  <div class="pv-task pv-done"><div class="pv-check"></div><div class="pv-task-text"></div></div>
-                  <div class="pv-task"><div class="pv-circle"></div><div class="pv-task-text"></div></div>
-                  <div class="pv-task"><div class="pv-circle"></div><div class="pv-task-text short"></div></div>
-                </div>
-                <div class="pv-progress-wrap">
-                  <div class="pv-prog-label">Progress</div>
-                  <div class="pv-prog-bar"><div class="pv-prog-fill"></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="project-category">Web App · Productivity</div>
-            <h3 class="project-title">TaskFlow<br/>To-Do App</h3>
-            <p class="project-desc">
-              A full-featured productivity application built with core JavaScript logic — featuring dynamic task creation, completion tracking, local storage persistence, real-time progress visualization, and an intuitive interactive UI. Demonstrates strong frontend engineering with complex state management and DOM-driven interactivity.
-            </p>
-            <div class="project-stack">
-              <span class="tech">JavaScript</span>
-              <span class="tech">DOM API</span>
-              <span class="tech">LocalStorage</span>
-              <span class="tech">CSS3</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="proj-btn proj-btn-primary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
-              <a href="#" class="proj-btn proj-btn-secondary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card reveal-up delay-3" data-tilt>
-          <div class="project-card-inner">
-            <div class="project-shimmer"></div>
-            <div class="project-header">
-              <div class="project-status">
-                <span class="status-dot"></span> Deployed
-              </div>
-              <div class="project-number">01</div>
-            </div>
-            <div class="project-visual project-visual-3">
-              <div class="pv-landing">
-                <div class="pv-land-hero">
-                  <div class="pv-land-tag">NEW</div>
-                  <div class="pv-land-headline"></div>
-                  <div class="pv-land-sub"></div>
-                  <div class="pv-land-cta"></div>
-                </div>
-                <div class="pv-land-features">
-                  <div class="pv-feat"></div>
-                  <div class="pv-feat"></div>
-                  <div class="pv-feat"></div>
-                </div>
-              </div>
-            </div>
-            <div class="project-category">Landing Page · Frontend</div>
-            <h3 class="project-title">Nova Product<br/>Landing Page</h3>
-            <p class="project-desc">
-              A polished, high-converting product landing page with advanced responsive layout engineering, smooth scroll animations, and modern CSS techniques. Features a multi-section structure with hero, features, and CTA sections — demonstrating mastery of layout design, visual hierarchy, and frontend execution at a professional level.
-            </p>
-            <div class="project-stack">
-              <span class="tech">HTML5</span>
-              <span class="tech">Advanced CSS</span>
-              <span class="tech">JavaScript</span>
-              <span class="tech">Responsive</span>
-            </div>
-            <div class="project-actions">
-              <a href="#" class="proj-btn proj-btn-primary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
-              <a href="#" class="proj-btn proj-btn-secondary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section class="contact" id="contact">
-    <div class="contact-bg">
-      <div class="contact-blob-1"></div>
-      <div class="contact-blob-2"></div>
+    <div class="section-header reveal">
+      <span class="section-label">&#9670; Let's connect</span>
+      <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+      <p class="section-subtitle">Have a project idea, collaboration opportunity, or just want to say hello? I'd love to hear from you.</p>
+      <div class="section-divider"></div>
     </div>
-    <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <div class="section-label reveal-up">Let's Connect</div>
-          <h2 class="section-title reveal-up delay-1">
-            Ready to build<br/>something <em>incredible</em>?
-          </h2>
-          <p class="contact-intro reveal-up delay-2">
-            I'm open to frontend roles, full-stack positions, web development projects, app development collaborations, and creative digital partnerships. Let's create something worth remembering.
-          </p>
-          <div class="contact-info reveal-up delay-3">
-            <a href="mailto:sabrinaswift45@gmail.com" class="contact-email">
-              <div class="email-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div class="email-text">
-                <div class="email-label">Email Me</div>
-                <div class="email-addr">sabrinaswift45@gmail.com</div>
-              </div>
-            </a>
-          </div>
-          <div class="contact-roles reveal-up delay-4">
-            <div class="role-badge">Frontend Roles</div>
-            <div class="role-badge">Full-Stack</div>
-            <div class="role-badge">Web Dev</div>
-            <div class="role-badge">App Dev</div>
-            <div class="role-badge">Creative Collab</div>
-          </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <h3>Let's build something <em>remarkable</em> together</h3>
+        <p>I'm currently open to frontend roles, full-stack positions, web development projects, app development opportunities, and creative digital collaborations. Whether you have a specific project in mind or just want to explore ideas — let's talk.</p>
+        <a href="mailto:sabrinaswift45@gmail.com" class="contact-email">
+          <span class="email-icon">&#9993;</span>
+          sabrinaswift45@gmail.com
+        </a>
+        <div class="contact-availability">
+          <span>&#10003; Frontend Roles</span>
+          <span>&#10003; Full-Stack Roles</span>
+          <span>&#10003; Web Development</span>
+          <span>&#10003; App Development</span>
+          <span>&#10003; Collaborations</span>
         </div>
-        <div class="contact-right reveal-up delay-2">
-          <div class="contact-form-wrap">
-            <div class="form-header">
-              <div class="form-title">Send a Message</div>
-              <div class="form-subtitle">I'll get back to you within 24 hours.</div>
+      </div>
+      <div class="reveal-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-fields">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Enter your name" required>
             </div>
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label class="form-label">Your Name</label>
-                <input type="text" class="form-input" placeholder="Alex Johnson" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email Address</label>
-                <input type="email" class="form-input" placeholder="alex@example.com" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Subject</label>
-                <input type="text" class="form-input" placeholder="Let's collaborate!" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Message</label>
-                <textarea class="form-textarea" placeholder="Tell me about your project or opportunity..." rows="4" required></textarea>
-              </div>
-              <button type="submit" class="form-submit" id="formSubmit">
-                <span class="submit-text">Send Message</span>
-                <span class="submit-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                </span>
-              </button>
-            </form>
-            <div class="form-success" id="formSuccess">
-              <div class="success-icon">✦</div>
-              <div class="success-title">Message Sent!</div>
-              <div class="success-text">Thank you for reaching out. I'll be in touch very soon.</div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" placeholder="Enter your email" required>
             </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message &#8594;</button>
           </div>
-        </div>
+          <div class="form-success">
+            <div class="success-icon">&#10003;</div>
+            <h4>Message Sent!</h4>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="footer-deco">
-      <div class="footer-star f-star-1">✦</div>
-      <div class="footer-star f-star-2">✧</div>
-      <div class="footer-star f-star-3">✶</div>
-      <div class="footer-line footer-line-1"></div>
-      <div class="footer-line footer-line-2"></div>
+    <div class="footer-deco-1"></div>
+    <div class="footer-deco-2"></div>
+    <div class="footer-stars">
+      <div class="footer-star"></div><div class="footer-star"></div>
+      <div class="footer-star"></div><div class="footer-star"></div>
+      <div class="footer-star"></div>
     </div>
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo">Samar Elahi</div>
-          <div class="footer-tagline">Full-Stack Developer · Web Designer · Mobile App Builder</div>
-        </div>
-        <nav class="footer-nav">
-          <a href="#about" class="footer-link">About</a>
-          <a href="#skills" class="footer-link">Skills</a>
-          <a href="#projects" class="footer-link">Projects</a>
-          <a href="#contact" class="footer-link">Contact</a>
-        </nav>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <div class="footer-copy">© 2025 Samar Elahi. Designed & built with love and code.</div>
-        <div class="footer-made">
-          Made with <span class="heart">♥</span> and pure CSS/JS
-        </div>
-      </div>
-    </div>
+    <div class="footer-name">Samar Elahi</div>
+    <p class="footer-tagline">Full-Stack Developer &middot; Web Designer &middot; Digital Creator</p>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-bottom">Designed & Developed with &#10084; by Samar Elahi &middot; 2025</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Main JS (deferred for fast load) -->
+  <script src="main.js" defer></script>
+
 </body>
 </html>
