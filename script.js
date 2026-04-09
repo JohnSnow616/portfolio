@@ -203,24 +203,59 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ===== CONTACT FORM =====
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('.form-submit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      setTimeout(() => {
+  // ===== CONTACT FORM WITH EMAILJS =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btn = this.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value || 'No subject',
+      message: document.getElementById('message').value
+    };
+
+    // Send email via EmailJS
+    emailjs.send('service_aha7l8n', 'template_gezwhrn', templateParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        
+        // Show success message
         const fields = contactForm.querySelector('.form-fields');
         const success = contactForm.querySelector('.form-success');
+        
         if (fields) fields.style.display = 'none';
         if (success) success.classList.add('show');
-        btn.textContent = 'Send Message →';
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Reset button after showing success
+        setTimeout(() => {
+          if (fields) fields.style.display = 'block';
+          if (success) success.classList.remove('show');
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }, 5000);
+        
+      }, function(error) {
+        console.error('FAILED...', error);
+        
+        // Show error alert
+        alert('❌ Failed to send message. Please email me directly at: sabrinaswift45@gmail.com');
+        
+        btn.textContent = originalText;
         btn.disabled = false;
-      }, 1500);
-    });
-  }
+      });
+  });
+}
 
   // ===== IDENTITY CARD HOVER TILT =====
   const idCard = document.querySelector('.identity-card');
