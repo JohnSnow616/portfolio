@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.skill-card').forEach(c => addTilt(c, 7));
   document.querySelectorAll('.exp-card').forEach(c => addTilt(c, 6));
   const af = document.querySelector('.about-frame');
-  if (af) addTilt(af, 10);
 
   // ===== COUNTER ANIMATION =====
   function animCounter(el, target, dur = 1400) {
